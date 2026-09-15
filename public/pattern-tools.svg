@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420">
+  <g fill="none" stroke="#b4823a" stroke-opacity="0.06" stroke-width="1.7"
+     stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- خوذة السلامة -->
+    <g transform="translate(34 46) rotate(-12) scale(1.35)">
+      <path d="M3 27h42" />
+      <path d="M9 27a15 15 0 0 1 30 0" />
+      <path d="M19 13V7h10v6" />
+      <path d="M24 12v15" />
+    </g>
+
+    <!-- مثلث الرسم الهندسي -->
+    <g transform="translate(258 34) rotate(16) scale(1.3)">
+      <path d="M4 42h40L4 6z" />
+      <path d="M11 37h22L11 19z" />
+      <path d="M4 30h5M4 22h5M12 42v-5M20 42v-5" />
+    </g>
+
+    <!-- مفتاح ربط -->
+    <g transform="translate(46 252) rotate(28) scale(1.3)">
+      <path d="M33 5a11 11 0 0 0-13 14L5 34l5 5 15-15a11 11 0 0 0 14-13l-7 7-6-1-1-6z" />
+    </g>
+
+    <!-- فرجار الرسم -->
+    <g transform="translate(296 244) rotate(-10) scale(1.3)">
+      <path d="M24 9v9" />
+      <circle cx="24" cy="6" r="3" />
+      <path d="M24 18 14 43M24 18l10 25" />
+      <path d="M17 33h14" />
+      <path d="M13 43l2-4M35 43l-2-4" />
+    </g>
+
+    <!-- مسطرة مدرّجة -->
+    <g transform="translate(150 152) rotate(42) scale(1.3)">
+      <rect x="3" y="15" width="44" height="17" rx="2" />
+      <path d="M11 15v6M19 15v9M27 15v6M35 15v9M43 15v6" />
+    </g>
+
+    <!-- ميزان ماء -->
+    <g transform="translate(184 330) rotate(-20) scale(1.2)">
+      <rect x="2" y="18" width="46" height="13" rx="2" />
+      <circle cx="25" cy="24.5" r="5" />
+      <path d="M20 24.5h-6M36 24.5h-6" />
+    </g>
+
+  </g>
+</svg>
