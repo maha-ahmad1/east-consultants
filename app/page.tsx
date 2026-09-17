@@ -747,7 +747,7 @@ export default function Page() {
                   </label>
                   <label>
                     نوع المشروع
-                    <select name="service" defaultValue="">
+                    <select name="service" defaultValue="" required>
                       <option value="" disabled hidden>
                         اختر نوع المشروع
                       </option>
