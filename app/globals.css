@@ -954,6 +954,10 @@ button {
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #a79b88;
+  font-size: 13px;
+}
+.contact-form select:invalid {
+  font-size: 13px;
 }
 .form-submit {
   width: 100%;
