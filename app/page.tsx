@@ -303,6 +303,8 @@ const testimonials: { name: string; role: string; text: string }[] = [];
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [contactSent, setContactSent] = useState(false);
+  const [contactError, setContactError] = useState("");
+  const [contactSending, setContactSending] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useReveal();
@@ -664,9 +666,34 @@ export default function Page() {
             </div>
             <form
               className="contact-form"
-              onSubmit={(event) => {
+              onSubmit={async (event) => {
                 event.preventDefault();
-                setContactSent(true);
+                setContactError("");
+                setContactSending(true);
+                const form = event.currentTarget;
+                const data = new FormData(form);
+                try {
+                  const response = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      name: data.get("name"),
+                      phone: data.get("phone"),
+                      email: data.get("email"),
+                      service: data.get("service"),
+                      message: data.get("message"),
+                    }),
+                  });
+                  if (!response.ok) throw new Error();
+                  setContactSent(true);
+                  form.reset();
+                } catch {
+                  setContactError(
+                    "تعذّر إرسال طلبك، حاول مرة أخرى أو تواصل معنا مباشرة."
+                  );
+                } finally {
+                  setContactSending(false);
+                }
               }}
             >
               {contactSent ? (
@@ -721,7 +748,7 @@ export default function Page() {
                   <label>
                     نوع المشروع
                     <select name="service" defaultValue="">
-                      <option value="" disabled>
+                      <option value="" disabled hidden>
                         اختر نوع المشروع
                       </option>
                       <option>فلل سكنية</option>
@@ -738,8 +765,16 @@ export default function Page() {
                       placeholder="اكتب نبذة عن العقار والمستندات المتوفرة لديك"
                     />
                   </label>
-                  <button className="form-submit" type="submit">
-                    إرسال الطلب <ArrowLeft size={18} />
+                  {contactError && (
+                    <p className="form-error">{contactError}</p>
+                  )}
+                  <button
+                    className="form-submit"
+                    type="submit"
+                    disabled={contactSending}
+                  >
+                    {contactSending ? "جارٍ الإرسال..." : "إرسال الطلب"}{" "}
+                    <ArrowLeft size={18} />
                   </button>
                   <p className="form-alt">
                     تفضّل الاتصال المباشر؟{" "}

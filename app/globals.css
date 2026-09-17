@@ -113,7 +113,7 @@ button {
   display: flex;
   gap: 34px;
   color: #3c5055;
-  font-size: 14px;
+  font-size: 17px;
 }
 .nav-links a:hover {
   color: var(--teal);
@@ -211,7 +211,7 @@ button {
   align-items: center;
   gap: 8px;
   color: var(--teal);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -373,7 +373,7 @@ button {
 .section-heading.centered > p {
   text-align: center;
   margin-top: 16px;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 2;
 }
 
@@ -481,14 +481,14 @@ button {
   color: var(--teal);
 }
 .why-card h3 {
-  font-size: 17px;
+  font-size: 22px;
   margin: 20px 0 10px;
   line-height: 1.5;
 }
 .why-card p {
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.85;
+  font-size: 16px;
+  line-height: 1.9;
   margin: 0;
 }
 
@@ -561,7 +561,7 @@ button {
 }
 .pillar-head h3 {
   margin: 0;
-  font-size: 15px;
+  font-size: 21px;
   font-weight: 700;
   color: var(--ink);
 }
@@ -577,8 +577,8 @@ button {
   align-items: flex-start;
   gap: 9px;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.7;
 }
 .license-offer li svg {
   flex: none;
@@ -666,20 +666,20 @@ button {
 .step-num {
   position: relative;
   color: var(--teal);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
 }
 .step-body h4 {
   position: relative;
   margin: 6px 0;
-  font-size: 17px;
+  font-size: 22px;
 }
 .step-body p {
   position: relative;
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.75;
+  font-size: 16px;
+  line-height: 1.8;
 }
 .license-result {
   margin-top: 22px;
@@ -953,6 +953,20 @@ button {
 .form-submit:hover {
   background: #1b1712;
   transform: translateY(-2px);
+}
+.form-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+.form-error {
+  margin: 0 0 4px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(196, 60, 40, 0.1);
+  color: #c43c28;
+  font-size: 13px;
+  text-align: center;
 }
 .form-success {
   min-height: 370px;
