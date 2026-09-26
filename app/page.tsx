@@ -349,7 +349,7 @@ export default function Page() {
             </a>
           </div>
           <div className="nav-actions">
-            <a href={CONTACT.phoneHref} className="nav-phone" dir="ltr">
+            <a href={CONTACT.phoneHref} className="nav-phone cta-phone" dir="ltr">
               <Phone size={15} />
               {CONTACT.phoneDisplay}
             </a>
@@ -388,7 +388,7 @@ export default function Page() {
               <a className="primary-btn" href="#form">
                 ابدأ طلبك الآن <ArrowLeft size={18} />
               </a>
-              <a className="hero-call" href={CONTACT.phoneHref}>
+              <a className="hero-call cta-phone" href={CONTACT.phoneHref}>
                 <span className="hero-call-icon">
                   <Phone size={17} />
                 </span>
@@ -595,7 +595,7 @@ export default function Page() {
               </h3>
             </div>
             <a
-              className="primary-btn"
+              className="primary-btn cta-whatsapp"
               href={CONTACT.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
@@ -622,7 +622,7 @@ export default function Page() {
                 اللازمة لإصدار الرخصة.
               </p>
               <div className="contact-details">
-                <a href={CONTACT.phoneHref}>
+                <a href={CONTACT.phoneHref} className="cta-phone">
                   <i>
                     <Phone size={19} />
                   </i>
@@ -635,6 +635,7 @@ export default function Page() {
                   href={CONTACT.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="cta-whatsapp"
                 >
                   <i>
                     <WhatsAppIcon size={19} />
@@ -704,7 +705,7 @@ export default function Page() {
                     شكراً لتواصلك. سنعود إليك قريباً لمناقشة تفاصيل رخصتك. وإن
                     كان الأمر مستعجلاً، اتصل بنا مباشرة.
                   </p>
-                  <a className="success-call" href={CONTACT.phoneHref} dir="ltr">
+                  <a className="success-call cta-phone" href={CONTACT.phoneHref} dir="ltr">
                     {CONTACT.phoneDisplay}
                   </a>
                   <button
@@ -769,7 +770,7 @@ export default function Page() {
                     <p className="form-error">{contactError}</p>
                   )}
                   <button
-                    className="form-submit"
+                    className="form-submit cta-submit-form"
                     type="submit"
                     disabled={contactSending}
                   >
@@ -778,7 +779,7 @@ export default function Page() {
                   </button>
                   <p className="form-alt">
                     تفضّل الاتصال المباشر؟{" "}
-                    <a href={CONTACT.phoneHref} dir="ltr">
+                    <a href={CONTACT.phoneHref} dir="ltr" className="cta-phone">
                       {CONTACT.phoneDisplay}
                     </a>{" "}
                     أو{" "}
@@ -786,6 +787,7 @@ export default function Page() {
                       href={CONTACT.whatsapp}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="cta-whatsapp"
                     >
                       واتساب
                     </a>
@@ -806,7 +808,7 @@ export default function Page() {
           </div>
           <div className="reach-grid">
             <a
-              className="reach-card"
+              className="reach-card cta-phone"
               href={CONTACT.phoneHref}
               data-reveal
               style={{ "--i": 0 } as React.CSSProperties}
@@ -820,7 +822,7 @@ export default function Page() {
               </span>
             </a>
             <a
-              className="reach-card is-whatsapp"
+              className="reach-card is-whatsapp cta-whatsapp"
               href={CONTACT.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
@@ -902,7 +904,7 @@ export default function Page() {
           </div>
           <div className="footer-contact">
             <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
-            <a href={CONTACT.phoneHref} dir="ltr">
+            <a href={CONTACT.phoneHref} dir="ltr" className="cta-phone">
               {CONTACT.phoneDisplay}
             </a>
             <span>{CONTACT.address}</span>
@@ -928,7 +930,7 @@ export default function Page() {
       </footer>
 
       <a
-        className="whatsapp"
+        className="whatsapp cta-whatsapp"
         href={CONTACT.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
