@@ -698,7 +698,7 @@ export default function Page() {
               }}
             >
               {contactSent ? (
-                <div className="form-success">
+                <div className="form-success cta-form-success">
                   <Check size={28} />
                   <h3>تم استلام طلبك</h3>
                   <p>
