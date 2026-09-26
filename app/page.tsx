@@ -349,7 +349,12 @@ export default function Page() {
             </a>
           </div>
           <div className="nav-actions">
-            <a href={CONTACT.phoneHref} className="nav-phone cta-phone" dir="ltr">
+            <a
+              href={CONTACT.phoneHref}
+              className="nav-phone phone-link"
+              id="cta-phone-header"
+              dir="ltr"
+            >
               <Phone size={15} />
               {CONTACT.phoneDisplay}
             </a>
@@ -388,7 +393,11 @@ export default function Page() {
               <a className="primary-btn" href="#form">
                 ابدأ طلبك الآن <ArrowLeft size={18} />
               </a>
-              <a className="hero-call cta-phone" href={CONTACT.phoneHref}>
+              <a
+                className="hero-call phone-link"
+                id="cta-phone-hero"
+                href={CONTACT.phoneHref}
+              >
                 <span className="hero-call-icon">
                   <Phone size={17} />
                 </span>
@@ -595,7 +604,8 @@ export default function Page() {
               </h3>
             </div>
             <a
-              className="primary-btn cta-whatsapp"
+              className="primary-btn whatsapp-link"
+              id="cta-whatsapp-result"
               href={CONTACT.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
@@ -622,7 +632,11 @@ export default function Page() {
                 اللازمة لإصدار الرخصة.
               </p>
               <div className="contact-details">
-                <a href={CONTACT.phoneHref} className="cta-phone">
+                <a
+                  href={CONTACT.phoneHref}
+                  className="phone-link"
+                  id="cta-phone-contact"
+                >
                   <i>
                     <Phone size={19} />
                   </i>
@@ -635,7 +649,8 @@ export default function Page() {
                   href={CONTACT.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cta-whatsapp"
+                  className="whatsapp-link"
+                  id="cta-whatsapp-contact"
                 >
                   <i>
                     <WhatsAppIcon size={19} />
@@ -698,14 +713,19 @@ export default function Page() {
               }}
             >
               {contactSent ? (
-                <div className="form-success cta-form-success">
+                <div className="form-success form-success-message">
                   <Check size={28} />
                   <h3>تم استلام طلبك</h3>
                   <p>
                     شكراً لتواصلك. سنعود إليك قريباً لمناقشة تفاصيل رخصتك. وإن
                     كان الأمر مستعجلاً، اتصل بنا مباشرة.
                   </p>
-                  <a className="success-call cta-phone" href={CONTACT.phoneHref} dir="ltr">
+                  <a
+                    className="success-call phone-link"
+                    id="cta-phone-success"
+                    href={CONTACT.phoneHref}
+                    dir="ltr"
+                  >
                     {CONTACT.phoneDisplay}
                   </a>
                   <button
@@ -770,7 +790,8 @@ export default function Page() {
                     <p className="form-error">{contactError}</p>
                   )}
                   <button
-                    className="form-submit cta-submit-form"
+                    className="form-submit"
+                    id="cta-form-submit"
                     type="submit"
                     disabled={contactSending}
                   >
@@ -779,7 +800,12 @@ export default function Page() {
                   </button>
                   <p className="form-alt">
                     تفضّل الاتصال المباشر؟{" "}
-                    <a href={CONTACT.phoneHref} dir="ltr" className="cta-phone">
+                    <a
+                      href={CONTACT.phoneHref}
+                      dir="ltr"
+                      className="phone-link"
+                      id="cta-phone-form-alt"
+                    >
                       {CONTACT.phoneDisplay}
                     </a>{" "}
                     أو{" "}
@@ -787,7 +813,8 @@ export default function Page() {
                       href={CONTACT.whatsapp}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="cta-whatsapp"
+                      className="whatsapp-link"
+                      id="cta-whatsapp-form-alt"
                     >
                       واتساب
                     </a>
@@ -808,7 +835,8 @@ export default function Page() {
           </div>
           <div className="reach-grid">
             <a
-              className="reach-card cta-phone"
+              className="reach-card phone-link"
+              id="cta-phone-reach"
               href={CONTACT.phoneHref}
               data-reveal
               style={{ "--i": 0 } as React.CSSProperties}
@@ -822,7 +850,8 @@ export default function Page() {
               </span>
             </a>
             <a
-              className="reach-card is-whatsapp cta-whatsapp"
+              className="reach-card is-whatsapp whatsapp-link"
+              id="cta-whatsapp-reach"
               href={CONTACT.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
@@ -904,7 +933,12 @@ export default function Page() {
           </div>
           <div className="footer-contact">
             <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
-            <a href={CONTACT.phoneHref} dir="ltr" className="cta-phone">
+            <a
+              href={CONTACT.phoneHref}
+              dir="ltr"
+              className="phone-link"
+              id="cta-phone-footer"
+            >
               {CONTACT.phoneDisplay}
             </a>
             <span>{CONTACT.address}</span>
@@ -930,7 +964,8 @@ export default function Page() {
       </footer>
 
       <a
-        className="whatsapp cta-whatsapp"
+        className="whatsapp whatsapp-link"
+        id="cta-whatsapp-fab"
         href={CONTACT.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
